@@ -1,0 +1,125 @@
+如果
+···
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+//任务3
+//高昕 5班 2019012472
+int main(void)
+{
+    int a,m=0,x=0;
+    int n,i;
+    char c;
+    srand(time(0));
+    a = rand() % 5 + 2;
+    x=a;
+    printf("整数运算器（+、-、*）\n");
+    printf("=====================\n");
+    printf("|       +:加法      |\n");
+    printf("|       -:减法      |\n");
+    printf("|       *:乘法      |\n");
+    printf("=====================\n");   
+        for (i=1;i<=a;i++)
+    {
+        printf("您还可以正确计算%d次\n",x);
+        x--;
+        printf("请输入表达式：");
+        scanf("%d%c%d",&m,&c,&n);
+        switch(c)
+        {
+        case '+':printf("和为：%d\n",m+n);
+            printf("\n"); 
+            break;
+        case '-':printf("差为：%d\n",m-n);
+            printf("\n"); 
+            break;
+        case '*':printf("积为：%d\n",m*n);
+            printf("\n");
+            break;
+        default :printf("本次输入有误\n");
+            printf("\n");
+            x++;
+            i--;
+            break;
+        }
+      }
+    return 0;
+}
+
+
+
+/*#include <stdio.h>
+//任务1
+//高昕 5班 2019012472
+int main(void)
+{
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c);
+    if(a+b>c){
+        if(a+c>b){
+            if(b+c>a)
+               { printf("以");
+                 printf("%d",a);
+                 printf(",");
+                 printf("%d",b);
+                 printf(",");
+                 printf("%d",c);
+                 printf("能够组成三角形\n");
+                 return 1;
+                }
+            else
+                printf("以");
+                printf("%d",a);
+                printf(",");
+                printf("%d",b);
+                printf(",");
+                printf("%d",c);
+                printf("不能够组成三角形\n");
+                return 1;
+                 }
+        else
+            printf("以");
+            printf("%d",a);
+            printf(",");
+            printf("%d",b);
+            printf(",");
+            printf("%d",c);
+            printf("不能够组成三角形\n");
+            return 1;
+             }
+    else
+        printf("以");
+        printf("%d",a);
+        printf(",");
+        printf("%d",b);
+        printf(",");
+        printf("%d",c);
+        printf("不能够组成三角形\n");
+    return 0;
+}*/
+
+
+
+/*#include <stdio.h>
+//任务2
+//高昕 5班 2019012472
+int main(void)
+{
+    int a,i,n;
+    int sum=0;
+   
+    printf("请输入数据个数：");
+    scanf("%d",&a);
+    for(i=1;i<=a;i++)
+    {      
+        printf("输入第%d个数:\n",i);
+        scanf("%d",&n);
+        if(n >=0)
+        {
+            sum+=n;
+        }
+
+    }
+    printf("%d",sum);
+    return 0;
+}*/
